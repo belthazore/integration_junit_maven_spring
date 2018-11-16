@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       ">
+    <import resource="classpath:backend-beans.xml"/>
+
+    <bean id="agent_service" class="com.mycompany.service.frontend.FrontendService">
+        <constructor-arg index="0" ref="name_service"/>
+        <constructor-arg index="1" ref="secret_service"/>
+    </bean>
+
+</beans>
